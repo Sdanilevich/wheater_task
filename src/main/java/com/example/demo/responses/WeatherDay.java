@@ -1,8 +1,10 @@
-package com.example.demo.responses;
+package main.java.com.example.demo.responses;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 
 @AllArgsConstructor
+@Getter
 public class WeatherDay {
 
     private String date;

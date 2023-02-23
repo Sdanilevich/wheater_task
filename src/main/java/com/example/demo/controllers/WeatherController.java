@@ -1,9 +1,10 @@
-package com.example.demo.controllers;
+package main.java.com.example.demo.controllers;
 
-import com.example.demo.requests.WeatherRequest;
-import com.example.demo.responses.WeatherResponse;
-import com.example.demo.services.WeatherService;
+import main.java.com.example.demo.requests.WeatherRequest;
+import main.java.com.example.demo.responses.WeatherResponse;
+import main.java.com.example.demo.services.WeatherService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDate;
+import java.util.TimeZone;
 
 @Slf4j
 @RestController
@@ -30,13 +32,11 @@ public class WeatherController {
             @RequestParam(defaultValue = "GMT") String timeZone) {
 
         try {
-
             WeatherResponse response = weatherService.getWeather(new WeatherRequest(latitude, longitude, timeZone));
-            return ResponseEntity.ok()
-                    .body(response);
-
+            return new ResponseEntity<>(response, HttpStatus.OK);
         } catch (Exception e) {
-            return ResponseEntity.internalServerError().build();
+            WeatherResponse error = new WeatherResponse(e.getMessage());
+            return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
         }
 
     }

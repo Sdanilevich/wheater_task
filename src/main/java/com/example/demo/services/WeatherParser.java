@@ -1,14 +1,12 @@
-package com.example.demo.services;
+package main.java.com.example.demo.services;
 
-import com.example.demo.api.model.WeatherModel;
-import com.example.demo.responses.WeatherDay;
-import com.example.demo.responses.WeatherResponse;
-import org.springframework.stereotype.Component;
+import main.java.com.example.demo.api.model.WeatherModel;
+import main.java.com.example.demo.responses.WeatherDay;
+import main.java.com.example.demo.responses.WeatherResponse;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
 public class WeatherParser {
 
     public WeatherResponse parse(WeatherModel openApiResponse){

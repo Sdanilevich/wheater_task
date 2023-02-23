@@ -1,7 +1,9 @@
-package com.example.demo.dao.repository;
+package main.java.com.example.demo.dao.repository;
 
-import com.example.demo.dao.entity.LogData;
+import main.java.com.example.demo.dao.entity.LogData;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface LogDataRepository extends JpaRepository<LogData, LogData> {
+@Repository
+public interface LogDataRepository extends JpaRepository<LogData, Long> {
 }

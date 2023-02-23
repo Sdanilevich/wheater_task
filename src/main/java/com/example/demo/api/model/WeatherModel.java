@@ -1,4 +1,4 @@
-package com.example.demo.api.model;
+package main.java.com.example.demo.api.model;
 
 import lombok.Getter;
 
