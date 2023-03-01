@@ -1,10 +1,10 @@
-package com.example.demo._entry.controllers;
+package main.java.com.example.demo._entry.controllers;
 
-import com.example.demo._entry.requests.WeatherRequest;
-import com.example.demo._entry.responses.WeatherResponse;
-import com.example.demo._usecases.contracts.IWeatherDay;
-import com.example.demo.weather.WeatherService;
 import lombok.extern.slf4j.Slf4j;
+import main.java.com.example.demo._entry.responses.WeatherResponse;
+import main.java.com.example.demo._entry.requests.WeatherRequest;
+import main.java.com.example.demo._usecases.contracts.IWeatherDay;
+import main.java.com.example.demo._usecases.contracts.WeatherFinder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,10 +22,10 @@ import java.util.TimeZone;
 @RequestMapping("/weather")
 public class WeatherController {
 
-    private final WeatherService weatherService;
+    private final WeatherFinder weatherFinder;
 
-    public WeatherController(WeatherService weatherService) {
-        this.weatherService = weatherService;
+    public WeatherController(WeatherFinder weatherFinder) {
+        this.weatherFinder = weatherFinder;
     }
 
     @GetMapping("search")
@@ -36,10 +36,11 @@ public class WeatherController {
 
         try {
             timeZone = timeZone == null ? this.defineTimeZone() : timeZone;
-            List<IWeatherDay> response = weatherService.getWeather(new WeatherRequest(latitude, longitude, timeZone));
+
+            List<IWeatherDay> days = weatherFinder.getWeather(new WeatherRequest(latitude, longitude, timeZone));
 
             return ResponseEntity.ok()
-                    .body(new WeatherResponse(response));
+                    .body(new WeatherResponse(days));
 
         } catch (Exception e) {
             log.error(e.getMessage(), e);

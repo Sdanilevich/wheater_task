@@ -1,7 +1,7 @@
-package com.example.demo._entry.responses;
+package main.java.com.example.demo._entry.responses;
 
-import com.example.demo._usecases.contracts.IWeatherDay;
 import lombok.AllArgsConstructor;
+import main.java.com.example.demo._usecases.contracts.IWeatherDay;
 
 import java.util.List;
 

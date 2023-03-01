@@ -1,8 +1,8 @@
 package main.java.com.example.demo.configuration;
-import main.java.com.example.demo.api.OpenMeteoApi;
-import main.java.com.example.demo.dao.repository.LogDataRepository;
-import main.java.com.example.demo.services.WeatherParser;
-import main.java.com.example.demo.services.WeatherService;
+import main.java.com.example.demo.weather.WeatherService;
+import main.java.com.example.demo.weather.api.OpenMeteoApi;
+import main.java.com.example.demo.weather.dataservices.LogDataRepository;
+import main.java.com.example.demo.weather.parser.WeatherParser;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

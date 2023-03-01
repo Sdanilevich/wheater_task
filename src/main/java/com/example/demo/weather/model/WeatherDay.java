@@ -1,8 +1,8 @@
-package com.example.demo.weather.model;
+package main.java.com.example.demo.weather.model;
 
-import com.example.demo._usecases.contracts.IWeatherDay;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import main.java.com.example.demo._usecases.contracts.IWeatherDay;
 
 @AllArgsConstructor
 @Getter

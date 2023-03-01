@@ -1,13 +1,14 @@
-package com.example.demo.weather;
+package main.java.com.example.demo.weather;
 
-import com.example.demo._usecases.contracts.IWeatherDay;
-import com.example.demo._usecases.contracts.IWeatherRequest;
-import com.example.demo._usecases.contracts.IWeatherService;
-import com.example.demo.weather.api.OpenMeteoApi;
-import com.example.demo.weather.model.WeatherModel;
-import com.example.demo._entry.entity.LogData;
-import com.example.demo.weather.parser.WeatherParser;
-import com.example.demo.weather.dataservices.LogDataRepository;
+
+import main.java.com.example.demo._entry.entity.LogData;
+import main.java.com.example.demo._usecases.contracts.IWeatherDay;
+import main.java.com.example.demo._usecases.contracts.IWeatherRequest;
+import main.java.com.example.demo._usecases.contracts.IWeatherService;
+import main.java.com.example.demo.weather.api.OpenMeteoApi;
+import main.java.com.example.demo.weather.dataservices.LogDataRepository;
+import main.java.com.example.demo.weather.model.WeatherModel;
+import main.java.com.example.demo.weather.parser.WeatherParser;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

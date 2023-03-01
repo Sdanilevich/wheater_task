@@ -1,4 +1,4 @@
-package com.example.demo._usecases.contracts;
+package main.java.com.example.demo._usecases.contracts;
 
 import java.util.List;
 

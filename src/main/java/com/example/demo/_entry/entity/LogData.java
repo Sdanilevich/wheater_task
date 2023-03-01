@@ -1,4 +1,7 @@
-package com.example.demo.dao.entity;
+package main.java.com.example.demo._entry.entity;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;

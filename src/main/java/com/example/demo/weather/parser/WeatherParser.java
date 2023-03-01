@@ -1,9 +1,9 @@
-package com.example.demo.weather.parser;
+package main.java.com.example.demo.weather.parser;
 
-import com.example.demo._usecases.contracts.IWeatherDay;
-import com.example.demo.weather.model.WeatherModel;
-import com.example.demo._entry.exceptions.ValidateException;
-import com.example.demo.weather.model.WeatherDay;
+import main.java.com.example.demo._entry.exceptions.ValidateException;
+import main.java.com.example.demo._usecases.contracts.IWeatherDay;
+import main.java.com.example.demo.weather.model.WeatherDay;
+import main.java.com.example.demo.weather.model.WeatherModel;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;

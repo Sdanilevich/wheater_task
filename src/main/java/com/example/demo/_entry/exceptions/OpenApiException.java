@@ -1,4 +1,4 @@
-package com.example.demo._entry.exceptions;
+package main.java.com.example.demo._entry.exceptions;
 
 public class OpenApiException extends RuntimeException{
 

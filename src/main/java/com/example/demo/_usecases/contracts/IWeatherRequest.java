@@ -1,8 +1,7 @@
-package com.example.demo._usecases.contracts;
+package main.java.com.example.demo._usecases.contracts;
 
 public interface IWeatherRequest {
     Double getLatitude();
     Double getLongitude();
-
     String getTimeZone();
 }
