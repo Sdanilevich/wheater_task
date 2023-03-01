@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 @Slf4j
 public class OpenMeteoApi {
 
-    @Value("open.meteo.url")
+    @Value("${open.meteo.url}")
     private String url;
 
     private final RestTemplate restTemplate;

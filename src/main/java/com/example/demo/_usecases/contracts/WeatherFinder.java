@@ -1,10 +1,7 @@
 package main.java.com.example.demo._usecases.contracts;
 
-import org.springframework.stereotype.Component;
-
 import java.util.List;
 
-@Component
 public class WeatherFinder {
 
     private final IWeatherService weatherService;
