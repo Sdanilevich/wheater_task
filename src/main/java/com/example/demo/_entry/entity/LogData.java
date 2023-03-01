@@ -1,13 +1,16 @@
-package com.example.demo._entry.entity;
+package com.example.demo.dao.entity;
 
 import javax.persistence.*;
 import java.util.Date;
 
-@Table
+@Getter
 @Entity
+@Table(name = "log_data")
+@NoArgsConstructor
 public class LogData {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column
     public Long id;
 

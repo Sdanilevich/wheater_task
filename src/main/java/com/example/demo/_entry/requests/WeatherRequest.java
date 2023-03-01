@@ -1,12 +1,11 @@
-package com.example.demo._entry.requests;
+package main.java.com.example.demo.requests;
 
-import com.example.demo._usecases.contracts.IWeatherRequest;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @AllArgsConstructor
 @Getter
-public class WeatherRequest implements IWeatherRequest {
+public class WeatherRequest {
 
     private final Double latitude;
     private final Double longitude;
