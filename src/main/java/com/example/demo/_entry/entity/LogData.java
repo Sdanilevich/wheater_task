@@ -1,4 +1,4 @@
-package com.example.demo.dao.entity;
+package com.example.demo._entry.entity;
 
 import javax.persistence.*;
 import java.util.Date;
