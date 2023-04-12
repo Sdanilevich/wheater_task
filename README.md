@@ -7,3 +7,7 @@ Aplikacja powinna każdorazowo zapisywać w relacyjnej bazie danych czas oraz pa
 Example of the urls:
 http://localhost:8090/weather/search?latitude=10.52&longitude=20.41&timeZone=EAT
 http://localhost:8090/weather/search?latitude=52.52&longitude=13.41
+
+
+
+mvn spring-boot:run -D"spring-boot.run.profiles"=remote
