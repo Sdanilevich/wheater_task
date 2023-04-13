@@ -1,15 +1,13 @@
-package main.java.com.example.demo.weather;
+package com.example.demo.weather;
 
 
-import main.java.com.example.demo._entry.entity.LogData;
-import main.java.com.example.demo._usecases.contracts.IWeatherDay;
-import main.java.com.example.demo._usecases.contracts.IWeatherRequest;
-import main.java.com.example.demo._usecases.contracts.IWeatherService;
-import main.java.com.example.demo.weather.api.OpenMeteoApi;
-import main.java.com.example.demo.weather.dataservices.LogDataRepository;
-import main.java.com.example.demo.weather.model.WeatherModel;
-import main.java.com.example.demo.weather.parser.WeatherParser;
-import org.springframework.stereotype.Component;
+import com.example.demo._entry.entity.LogData;
+import com.example.demo._usecases.contracts.IWeatherDay;
+import com.example.demo._usecases.contracts.IWeatherRequest;
+import com.example.demo._usecases.contracts.IWeatherService;
+import com.example.demo.weather.api.OpenMeteoApi;
+import com.example.demo.weather.dataservices.LogDataRepository;
+import com.example.demo.weather.parser.WeatherParser;
 
 import java.util.List;
 
@@ -26,9 +24,9 @@ public class WeatherService implements IWeatherService {
     }
 
     public List<IWeatherDay> getWeather(IWeatherRequest weatherRequest) {
-        WeatherModel openApiResponse = openMeteoApi.getOpenMeteorData(weatherRequest.getLatitude(), weatherRequest.getLongitude(), weatherRequest.getTimeZone());
-        List<IWeatherDay> response =  weatherParser.parse(openApiResponse);
-        LogData logData = new LogData(weatherRequest.getLatitude(), weatherRequest.getLongitude());
+        var openApiResponse = openMeteoApi.getOpenMeteorData(weatherRequest.getLatitude(), weatherRequest.getLongitude(), weatherRequest.getTimeZone());
+        var response =  weatherParser.parse(openApiResponse);
+        var logData = new LogData(weatherRequest.getLatitude(), weatherRequest.getLongitude());
         logDataRepository.save(logData);
         return response;
     }

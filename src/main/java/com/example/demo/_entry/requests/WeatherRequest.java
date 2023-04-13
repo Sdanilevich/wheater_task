@@ -1,8 +1,8 @@
-package main.java.com.example.demo._entry.requests;
+package com.example.demo._entry.requests;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import main.java.com.example.demo._usecases.contracts.IWeatherRequest;
+import com.example.demo._usecases.contracts.IWeatherRequest;
 
 @AllArgsConstructor
 @Getter

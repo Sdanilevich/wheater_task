@@ -1,9 +1,9 @@
-package main.java.com.example.demo.weather.parser;
+package com.example.demo.weather.parser;
 
-import main.java.com.example.demo._entry.exceptions.ValidateException;
-import main.java.com.example.demo._usecases.contracts.IWeatherDay;
-import main.java.com.example.demo.weather.model.WeatherDay;
-import main.java.com.example.demo.weather.model.WeatherModel;
+import com.example.demo._entry.exceptions.ValidateException;
+import com.example.demo._usecases.contracts.IWeatherDay;
+import com.example.demo.weather.model.WeatherDay;
+import com.example.demo.weather.model.WeatherModel;
 
 import java.util.List;
 import java.util.stream.IntStream;

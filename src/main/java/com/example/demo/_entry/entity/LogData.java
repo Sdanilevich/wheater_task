@@ -1,4 +1,4 @@
-package main.java.com.example.demo._entry.entity;
+package com.example.demo._entry.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,6 +19,9 @@ public class LogData {
 
     @Column
     public Date created_at;
+
+    @Column
+    public Date updated_at;
 
     @Column
     public Double latitude;

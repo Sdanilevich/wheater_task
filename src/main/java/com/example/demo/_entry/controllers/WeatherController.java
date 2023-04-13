@@ -1,9 +1,9 @@
-package main.java.com.example.demo._entry.controllers;
+package com.example.demo._entry.controllers;
 
 import lombok.extern.slf4j.Slf4j;
-import main.java.com.example.demo._entry.responses.WeatherResponse;
-import main.java.com.example.demo._entry.requests.WeatherRequest;
-import main.java.com.example.demo._usecases.contracts.WeatherFinder;
+import com.example.demo._entry.responses.WeatherResponse;
+import com.example.demo._entry.requests.WeatherRequest;
+import com.example.demo._usecases.contracts.WeatherFinder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
